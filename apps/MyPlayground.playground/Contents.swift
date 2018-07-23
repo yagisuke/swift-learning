@@ -30,3 +30,17 @@ let d4: Bool = true
 // 型変換のサンプル
 var x = "four"
 x = String(4)
+
+/* lesson5: データの演算をしてみよう */
+print(10 + 3) // 13
+print(10 - 3) // 7
+print(10 / 3) // 3
+print(10.0 / 3) // 3.3333...
+print(10 % 3) // 1
+
+var a5 = 10
+a5 += 5
+print(a5) // 15
+
+var b5 = 29
+print("私の年齢は\(b5)才です。")

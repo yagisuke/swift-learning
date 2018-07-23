@@ -1,5 +1,8 @@
-//: Playground - noun: a place where people can play
-
-import UIKit
-
-var str = "Hello, playground"
+/* lesson2: はじめてのSwiftプログラム */
+// single comment
+/*
+ multi
+ comment
+ */
+print("hello world")
+print("hello")

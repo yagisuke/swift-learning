@@ -60,9 +60,9 @@ print("あなたの得点は\(score6)です。評価は、resultです。")
 print(score6 > 70 ? "good" : "bad")
 
 /* lesson7: switchで条件分岐をしてみよう */
-let num = 90
+let num7 = 90
 
-switch num {
+switch num7 {
 case 0:
     print("zero")
 case 1, 2, 3:
@@ -76,3 +76,18 @@ case let n where n > 10:
 default:
     print("default")
 }
+
+/* lesson8: whileで繰り返し処理をしてみよう */
+var n8 = 0
+
+// 条件判定を前にする場合
+while n8 < 3 {
+    print(n8)
+    n8 += 1
+}
+
+// 条件判定を後にする場合
+repeat {
+    print("repeat\(n8)")
+    n8 += 1
+} while n8 < 3

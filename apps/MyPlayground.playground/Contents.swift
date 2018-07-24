@@ -102,3 +102,20 @@ for i in 0...5 {
     }
     print(i)
 }
+
+/* lesson10: オプショナル型を使ってみよう */
+let a10: Optional<String> = nil
+let b10: String? = nil
+
+if a10 != nil {
+    print(a10!) // オプショナル型から値をとるのを unwrap するという
+}
+
+// optional binding
+if let value10 = b10 {
+    print(value10)
+}
+
+print(a10 ?? "nil です")
+
+

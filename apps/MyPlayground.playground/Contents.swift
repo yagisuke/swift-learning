@@ -91,3 +91,14 @@ repeat {
     print("repeat\(n8)")
     n8 += 1
 } while n8 < 3
+
+/* lesson9: forでループ処理をしてみよう */
+for i in 0...5 {
+    if i == 2 {
+        continue
+    }
+    if i == 5 {
+        break
+    }
+    print(i)
+}

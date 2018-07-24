@@ -44,3 +44,17 @@ print(a5) // 15
 
 var b5 = 29
 print("私の年齢は\(b5)才です。")
+
+/* lesson6: ifで条件分岐をしてみよう */
+let score6 = 82
+let result:String
+
+if score6 > 80 {
+    result = "greate"
+} else if score6 > 70 {
+    result = "good"
+} else {
+    result = "so so.."
+}
+print("あなたの得点は\(score6)です。評価は、resultです。")
+print(score6 > 70 ? "good" : "bad")

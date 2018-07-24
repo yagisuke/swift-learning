@@ -58,3 +58,21 @@ if score6 > 80 {
 }
 print("あなたの得点は\(score6)です。評価は、resultです。")
 print(score6 > 70 ? "good" : "bad")
+
+/* lesson7: switchで条件分岐をしてみよう */
+let num = 90
+
+switch num {
+case 0:
+    print("zero")
+case 1, 2, 3:
+    print("small")
+case 4...6:
+    print("4/5/6")
+case 7..<9:
+    print("7/8")
+case let n where n > 10:
+    print("\(n) is huge.")
+default:
+    print("default")
+}

@@ -143,3 +143,21 @@ print(product12, amount12)
 
 var products12 = (product: "apple", amount: 5)
 print(products12.product, products12.amount)
+
+/* lesson13: 集合型のデータを扱ってみよう */
+var winners13: Set<Int> = [3, 5, 8, 8, 3] // 重複は削除される
+print(winners13)
+
+winners13.insert(10)
+winners13.remove(8)
+print(winners13, winners13.count)
+
+let s13 = Set<Int>()
+print(s13.isEmpty)
+
+let a13: Set = [1, 3, 5, 7]
+let b13: Set = [3, 5, 8, 9]
+
+print(a13.union(b13)) // 和集合
+print(a13.intersection(b13)) // 積集合
+print(a13.subtracting(b13)) // 差集合

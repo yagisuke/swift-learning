@@ -131,3 +131,15 @@ names11 += ["carlos"]
 for (index, n) in names11.enumerated() {
     print(index + 1, n)
 }
+
+/* lesson12: タプルを使ってみよう */
+var items12 = ("apple", 5)
+print(items12.0)
+items12.1 = 9
+print(items12)
+
+let (product12, amount12) = items12
+print(product12, amount12)
+
+var products12 = (product: "apple", amount: 5)
+print(products12.product, products12.amount)

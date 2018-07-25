@@ -119,7 +119,6 @@ if let value10 = b10 {
 print(a10 ?? "nil です")
 
 /* lesson11: 配列を使ってみよう */
-// 配列、タプル
 var scores11 = [50, 40]
 scores11[0] = 30
 print(scores11[0], scores11.count, scores11.isEmpty)
@@ -161,3 +160,17 @@ let b13: Set = [3, 5, 8, 9]
 print(a13.union(b13)) // 和集合
 print(a13.intersection(b13)) // 積集合
 print(a13.subtracting(b13)) // 差集合
+
+/* lesson14: 辞書型のデータを扱ってみよう */
+var sales14: Dictionary<String, Int> = ["yagisuke": 100, "carlos": 200]
+print(sales14["yagisuke"] ?? "0")
+
+sales14["yusuke"] = 90
+print(sales14.count)
+
+for (key, value) in sales14 {
+    print("\(key): \(value)")
+}
+
+let d14 = [String: Int]()
+print(d14.isEmpty)

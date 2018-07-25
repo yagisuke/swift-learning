@@ -118,4 +118,16 @@ if let value10 = b10 {
 
 print(a10 ?? "nil です")
 
+/* lesson11: 配列を使ってみよう */
+// 配列、タプル
+var scores11 = [50, 40]
+scores11[0] = 30
+print(scores11[0], scores11.count, scores11.isEmpty)
 
+var names11 = [String]()
+names11.append("yagisuke")
+names11 += ["carlos"]
+
+for (index, n) in names11.enumerated() {
+    print(index + 1, n)
+}

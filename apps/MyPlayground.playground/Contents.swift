@@ -255,3 +255,33 @@ let tom19 = User19(name: "tom", score: 23)
 print(tom19.name, tom19.score)
 let yagisuke19 = User19()
 print(yagisuke19.name, yagisuke19.score)
+
+/* lesson20: 計算プロパティを扱ってみよう */
+class User20 {
+    let name: String // property
+    var score: Int
+    // 計算プロパティ
+    var level: Int {
+        get {
+            return Int(score / 10)
+        }
+        set {
+            if newValue >= 0 {
+                score = newValue * 10
+            }
+            
+        }
+    }
+    
+    init(_ name: String, _ score: Int) {
+        self.name = name
+        self.score = score
+    }
+}
+
+let tom20 = User20("tom", 988)
+print(tom20.level)
+tom20.level = 30
+print(tom20.score)
+tom20.level = -30
+print(tom20.score)

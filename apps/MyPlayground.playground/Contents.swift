@@ -218,3 +218,18 @@ func add17(x: inout Int) {
 var i17 = 10
 add17(x: &i17)
 print(i17)
+
+/* lesson18: クラスで型を作ってみよう */
+class User18 {
+    let name: String // property
+    var score: Int
+    init() {
+        self.name = "me!"
+        self.score = 23
+    }
+}
+
+let user18 = User18()
+print(user18.name, user18.score)
+user18.score += 1
+print(user18.name, user18.score)

@@ -389,3 +389,30 @@ let carlos24 = AdminUser24("carlos", 29)
 print("\(AdminUser24.getInfo()) instances.")
 let yagi24 = User24("yagi", 29)
 print("\(User24.getInfo()) instances.")
+
+/* lesson25: 型キャストを使ってみよう */
+class User25 {
+    let name: String
+    var score: Int
+    
+    init(_ name: String, _ score: Int) {
+        self.name = name
+        self.score = score
+    }
+}
+
+class AdminUser25: User25 {}
+
+let user25 = User25("user rider", 12)
+let admin25 = AdminUser25("admin rider", 21)
+
+let users = [user25, admin25]
+for user in users {
+    if let u = user as? AdminUser25 {
+        print("[admin]: \(u.name) \(u.score)")
+    }
+    
+    if user is AdminUser25 {
+        print("[admin]: \(user.name) \(user.score)")
+    }
+}

@@ -208,3 +208,13 @@ sayHi16(name: "Tom")
 sayHello16(from: "Bob")
 sayBye16("Deen")
 sayGood16()
+
+/* lesson17: inoutキーワードを使ってみよう */
+func add17(x: inout Int) {
+    x = x + 10
+    print(x)
+}
+
+var i17 = 10
+add17(x: &i17)
+print(i17)

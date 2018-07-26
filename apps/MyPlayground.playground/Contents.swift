@@ -174,3 +174,15 @@ for (key, value) in sales14 {
 
 let d14 = [String: Int]()
 print(d14.isEmpty)
+
+/* lesson15: 関数を使ってみよう */
+func sayHi15() {
+    print("hi")
+}
+
+func getHi15() -> String {
+    return "hi"
+}
+
+sayHi15()
+print(getHi15())

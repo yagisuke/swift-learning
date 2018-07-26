@@ -223,6 +223,7 @@ print(i17)
 class User18 {
     let name: String // property
     var score: Int
+
     init() {
         self.name = "me!"
         self.score = 23
@@ -233,3 +234,24 @@ let user18 = User18()
 print(user18.name, user18.score)
 user18.score += 1
 print(user18.name, user18.score)
+
+/* lesson19: イニシャライザを使ってみよう */
+class User19 {
+    let name: String // property
+    var score: Int
+
+    init(name: String, score: Int) {
+        self.name = name
+        self.score = score
+    }
+
+    init() {
+        self.name = "yagisuke"
+        self.score = 29
+    }
+}
+
+let tom19 = User19(name: "tom", score: 23)
+print(tom19.name, tom19.score)
+let yagisuke19 = User19()
+print(yagisuke19.name, yagisuke19.score)

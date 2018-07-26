@@ -309,3 +309,21 @@ class User21 {
 let yagiuke21 = User21("yagisuke", 5)
 yagiuke21.score = 10
 yagiuke21.score = 3
+
+/* lesson22: メソッドを使ってみよう */
+class User22 {
+    let name: String // property
+    var score: Int
+    
+    init(_ name: String, _ score: Int) {
+        self.name = name
+        self.score = score
+    }
+    
+    func sayHi(_ msg: String) {
+        print("\(msg) \(name)")
+    }
+}
+
+let tom22 = User22("tom", 23)
+tom22.sayHi("Good!")

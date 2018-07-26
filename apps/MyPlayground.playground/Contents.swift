@@ -285,3 +285,27 @@ tom20.level = 30
 print(tom20.score)
 tom20.level = -30
 print(tom20.score)
+
+/* lesson21: プロパティの値を監視しよう */
+class User21 {
+    let name: String // property
+    var score: Int {
+        willSet {
+            // before change
+            print("\(score) -> \(newValue)")
+        }
+        didSet {
+            // after change
+            print("Changed: -> \(score - oldValue)")
+        }
+    }
+
+    init(_ name: String, _ score: Int) {
+        self.name = name
+        self.score = score
+    }
+}
+
+let yagiuke21 = User21("yagisuke", 5)
+yagiuke21.score = 10
+yagiuke21.score = 3

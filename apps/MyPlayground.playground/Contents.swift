@@ -358,3 +358,34 @@ let user23 = AdminUser23("yagisuke", 11)
 print(user23.name, user23.score)
 user23.sayHello()
 user23.sayHi("BAD!!")
+
+/* lesson24: 型プロパティ､型メソッドを使おう */
+class User24 {
+    let name: String // property
+    var score: Int
+    static var count = 0
+    
+    init(_ name: String, _ score: Int) {
+        self.name = name
+        self.score = score
+        User24.count += 1
+    }
+
+    class func getInfo() -> String {
+        return String(count)
+    }
+}
+
+class AdminUser24: User24 {
+    override class func getInfo() -> String {
+        return "[admin] \(count)"
+    }
+}
+
+print("\(User24.getInfo()) instances.")
+let yagisuke24 = User24("yagisuke", 29)
+print("\(User24.getInfo()) instances.")
+let carlos24 = AdminUser24("carlos", 29)
+print("\(AdminUser24.getInfo()) instances.")
+let yagi24 = User24("yagi", 29)
+print("\(User24.getInfo()) instances.")

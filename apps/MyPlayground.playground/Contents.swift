@@ -186,3 +186,25 @@ func getHi15() -> String {
 
 sayHi15()
 print(getHi15())
+
+/* lesson16: 引数について理解しよう */
+func sayHi16(name: String) {
+    print("hi \(name)")
+}
+
+func sayHello16(from name: String) {
+    print("hello \(name)")
+}
+
+func sayBye16(_ name: String) {
+    print("bye \(name)")
+}
+
+func sayGood16(_ name: String = "John") {
+    print("Good!! \(name)!!")
+}
+
+sayHi16(name: "Tom")
+sayHello16(from: "Bob")
+sayBye16("Deen")
+sayGood16()

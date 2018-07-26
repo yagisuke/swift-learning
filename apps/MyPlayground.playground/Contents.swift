@@ -327,3 +327,34 @@ class User22 {
 
 let tom22 = User22("tom", 23)
 tom22.sayHi("Good!")
+
+/* lesson23: クラスを継承してみよう */
+// User => AdminUser
+class User23 {
+    let name: String // property
+    var score: Int
+    
+    init(_ name: String, _ score: Int) {
+        self.name = name
+        self.score = score
+    }
+    
+    func sayHi(_ msg: String) {
+        print("\(msg) \(name)")
+    }
+}
+
+class AdminUser23: User23 {
+    func sayHello() {
+        print("hello \(name)")
+    }
+    
+    override func sayHi(_ msg: String) {
+        print("[admin] \(msg) \(name)!!")
+    }
+}
+
+let user23 = AdminUser23("yagisuke", 11)
+print(user23.name, user23.score)
+user23.sayHello()
+user23.sayHi("BAD!!")

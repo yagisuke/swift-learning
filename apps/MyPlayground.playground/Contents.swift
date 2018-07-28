@@ -416,3 +416,28 @@ for user in users {
         print("[admin]: \(user.name) \(user.score)")
     }
 }
+
+/* lesson26: プロトコルを適合させてみよう */
+protocol Printable26 {
+    var type: String { get }
+    var count: Int { get set }
+    func printout()
+}
+
+class User26: Printable26 {
+    let name: String
+    let type = "Laser"
+    var count = 0
+    init(_ name: String) {
+        self.name = name
+    }
+    func printout() {
+        count += 1
+        print("\(type): \(name), \(count)")
+    }
+}
+
+let yagisuke26 = User26("yagisuke")
+yagisuke26.printout()
+yagisuke26.printout()
+yagisuke26.printout()

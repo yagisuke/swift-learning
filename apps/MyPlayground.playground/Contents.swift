@@ -503,3 +503,26 @@ var copy29 = original29
 original29.name = "bob"
 print(original29.name)
 print(copy29.name)
+
+/* lesson30: 列挙型を使ってみよう */
+enum Direction30 {
+    case right
+    case left
+}
+var dir30: Direction30
+// dir30 = Direction30.left
+dir30 = .left
+
+switch  (dir30) {
+case .right:
+    print("right")
+case .left:
+    print("left")
+}
+
+enum Jiku30: Int {
+    case right = 1
+    case left = -1
+}
+
+print(Jiku30.left.rawValue)

@@ -526,3 +526,33 @@ enum Jiku30: Int {
 }
 
 print(Jiku30.left.rawValue)
+
+/* lesson31: ジェネリクスで型を汎用化しよう */
+func getThree31<T>(x: T) {
+    print(x)
+    print(x)
+    print(x)
+}
+
+getThree31(x: 5)
+getThree31(x: "text")
+getThree31(x: 99.9)
+
+/* lesson32: サブスクリプトを使ってみよう */
+class Team32 {
+    var members = ["yagisuke", "carlos", "tom"]
+
+    subscript(index: Int) -> String {
+        get {
+            return members[index]
+        }
+        set {
+            members.insert(newValue, at: index)
+        }
+    }
+}
+
+var giants32 = Team32()
+print(giants32[1])
+giants32[3] = "tanaka"
+print(giants32[3])

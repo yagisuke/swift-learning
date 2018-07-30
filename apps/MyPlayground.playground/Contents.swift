@@ -568,3 +568,34 @@ func sayHi33(_ msg: String?) {
 
 sayHi33(nil)
 sayHi33("hello")
+
+/* lesson34: 例外処理をしてみよう */
+enum LoginError: Error {
+    case emptyName
+    case shortName
+}
+
+class User34 {
+    let name: String
+    init(_ name: String) {
+        self.name = name
+    }
+    func login() throws {
+        guard name != "" else {
+            throw LoginError.emptyName
+        }
+        guard name.count > 5 else {
+            throw LoginError.shortName
+        }
+        print("login success")
+    }
+}
+
+let tom34 = User34("")
+do {
+    try tom34.login()
+} catch LoginError.emptyName {
+    print("please enter your name")
+} catch LoginError.shortName {
+    print("too short")
+}

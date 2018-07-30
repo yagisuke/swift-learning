@@ -472,3 +472,34 @@ class User27: Printable27 {
 
 let tom27 = User27("tom")
 tom27.printout()
+
+/* lesson28:  */
+class User28 {
+    var name: String
+    init(_ name: String) {
+        self.name = name
+    }
+}
+
+var original28 = User28("tom")
+var copy28 = original28
+original28.name = "bob"
+print(original28.name)
+print(copy28.name)
+
+/* lesson29: 構造体を使ってみよう */
+struct User29 {
+    var name: String
+    init(_ name: String) {
+        self.name = name
+    }
+    mutating func changeName() {
+        self.name = name.uppercased()
+    }
+}
+
+var original29 = User29("tom")
+var copy29 = original29
+original29.name = "bob"
+print(original29.name)
+print(copy29.name)

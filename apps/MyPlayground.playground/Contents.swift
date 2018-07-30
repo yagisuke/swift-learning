@@ -556,3 +556,15 @@ var giants32 = Team32()
 print(giants32[1])
 giants32[3] = "tanaka"
 print(giants32[3])
+
+/* lesson33: guardを活用してみよう */
+func sayHi33(_ msg: String?) {
+    guard let s = msg else {
+        print("value not set!")
+        return
+    }
+    print(s)
+}
+
+sayHi33(nil)
+sayHi33("hello")

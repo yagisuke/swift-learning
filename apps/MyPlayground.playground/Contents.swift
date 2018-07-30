@@ -599,3 +599,15 @@ do {
 } catch LoginError.shortName {
     print("too short")
 }
+
+/* lesson35: Optional Chainingを使ってみよう */
+class User35 {
+    var name: String? = ""
+}
+
+let user35: User35?
+user35 = User35()
+user35?.name = "yagisuke"
+if let s35 = user35?.name?.uppercased() {
+    print(s35)
+}

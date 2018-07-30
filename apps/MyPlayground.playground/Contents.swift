@@ -611,3 +611,13 @@ user35?.name = "yagisuke"
 if let s35 = user35?.name?.uppercased() {
     print(s35)
 }
+
+/* lesson36: 暗黙的アンラップオプショナル型を使おう */
+var msg36: String!
+msg36 = "hell kkkk kkk"
+
+//if msg != nil {
+//    print(msg!)
+//}
+
+print(msg36)

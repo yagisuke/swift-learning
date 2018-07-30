@@ -441,3 +441,34 @@ let yagisuke26 = User26("yagisuke")
 yagisuke26.printout()
 yagisuke26.printout()
 yagisuke26.printout()
+
+/* lesson27: エクステンションで型を拡張しよう */
+extension String {
+    var length: Int {
+        return self.count
+    }
+}
+
+let msg27 = "hello"
+print(msg27.count)
+print(msg27.length)
+
+protocol Printable27 {
+    func printout()
+}
+
+extension Printable27 {
+    func printout() {
+        print("now printing...")
+    }
+}
+
+class User27: Printable27 {
+    let name: String
+    init(_ name: String) {
+        self.name = name
+    }
+}
+
+let tom27 = User27("tom")
+tom27.printout()
